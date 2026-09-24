@@ -5,7 +5,7 @@ export type Article = {
   description: string;
   published_at: string;
   reading_time_minutes: number;
-  tag_list: string[];
+  tag_list: readonly string[];
   url: string;
   source?: string;
 };
