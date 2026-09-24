@@ -1,0 +1,98 @@
+export const siteConfig = {
+  name: "[YOUR_NAME]",
+  initials: "[YO]",
+  role: "[YOUR_ROLE / FOCUS]",
+  availability: "Available for projects",
+  email: "[YOUR_EMAIL]",
+  devtoUsername: "[YOUR_DEVTO_USERNAME]",
+  socials: {
+    github: "https://github.com/[YOUR_GITHUB_USERNAME]",
+    linkedin: "https://www.linkedin.com/in/[YOUR_LINKEDIN_USERNAME]/",
+    devto: "https://dev.to/[YOUR_DEVTO_USERNAME]",
+    x: "https://x.com/[YOUR_X_USERNAME]",
+    instagram: "https://instagram.com/[YOUR_INSTAGRAM_USERNAME]",
+    whatsapp: "https://wa.me/[YOUR_WHATSAPP_NUMBER]",
+  },
+  hero: {
+    headline: "[BACKEND / SYSTEMS / WEB ARCHITECTURE FOCUS]",
+    bio: "[2–3 sentences about how you build, learn, solve problems, and think about performance.]",
+  },
+  navigation: [
+    { label: "Projects", href: "#projects" },
+    { label: "Articles", href: "#articles" },
+    { label: "Experience", href: "#experience" },
+    { label: "About", href: "#about" },
+  ],
+  projects: [
+    {
+      title: "ASCII Art Web",
+      subtitle: "[PROJECT_1_SUBTITLE]",
+      problem: "[PROJECT_1_PROBLEM]",
+      solution: "[PROJECT_1_SOLUTION]",
+      outcome: "",
+      tech: ["Go", "HTML", "CSS"],
+      demo: "",
+      source: "[PROJECT_1_SOURCE_URL]",
+    },
+    {
+      title: "Push-Swap",
+      subtitle: "[PROJECT_2_SUBTITLE]",
+      problem: "[PROJECT_2_PROBLEM]",
+      solution: "[PROJECT_2_SOLUTION]",
+      outcome: "",
+      tech: ["Go", "Algorithms"],
+      demo: "",
+      source: "[PROJECT_2_SOURCE_URL]",
+    },
+    {
+      title: "Go Reloaded",
+      subtitle: "[PROJECT_3_SUBTITLE]",
+      problem: "[PROJECT_3_PROBLEM]",
+      solution: "[PROJECT_3_SOLUTION]",
+      outcome: "",
+      tech: ["Go", "File Processing"],
+      demo: "",
+      source: "[PROJECT_3_SOURCE_URL]",
+    },
+  ],
+  experience: [
+    {
+      period: "[DATE]",
+      title: "[ROLE]",
+      organization: "[ORGANIZATION]",
+      description: "[WHAT YOU WORKED ON / LEARNED]",
+    },
+  ],
+  education: [
+    {
+      period: "[DATE]",
+      title: "[DEGREE / PROGRAM]",
+      organization: "[INSTITUTION]",
+      description: "[OPTIONAL DETAIL]",
+    },
+  ],
+  competencies: {
+    Languages: ["Go", "JavaScript", "HTML", "CSS"],
+    "Backend & Data": ["[TECHNOLOGY]", "[DATABASE]"],
+    Tools: ["Git", "Docker", "[TOOL]"],
+  },
+  hobbies: {
+    reading: "[CURRENT_BOOK / TOPIC]",
+    experiments: "[EXPERIMENTS, SIDE PROJECTS, OR INTERESTS]",
+    workflow: "[MUSIC / ROUTINE / FOCUS WORKFLOW]",
+  },
+  mockArticles: [
+    {
+      title: "Starting My Go Journey",
+      description: "[ARTICLE_DESCRIPTION]",
+      published_at: "2026-01-01",
+      reading_time_minutes: 3,
+      tag_list: ["go", "learning"],
+      url: "https://www.linkedin.com/",
+      source: "LinkedIn",
+    },
+  ],
+  footer: {
+    tagline: "[SHORT CLOSING LINE]",
+  },
+} as const;
