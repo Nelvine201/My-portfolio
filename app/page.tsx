@@ -91,7 +91,7 @@ export default function Home() {
         <section className="hero">
           <div className="page-width hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">NELVIN OCHIENG / SOFTWARE ENGINEERING</p>
+              <p className="eyebrow">NELVIN OCHIENG</p>
               <h1>{siteConfig.role}</h1>
               <p className="hero-lead">{siteConfig.hero.headline}</p>
               <p className="hero-bio">{siteConfig.hero.bio}</p>
