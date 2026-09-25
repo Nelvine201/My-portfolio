@@ -116,7 +116,7 @@ export default function Home() {
         </section>
 
         <div className="page-width">
-          <Section id="projects" number="01" title="Featured Projects">
+          <Section id="projects" title="Featured Projects">
             <div className="project-grid">
               {siteConfig.projects.map((project) => (
                 <ProjectCard key={project.title} project={project} />
@@ -124,7 +124,7 @@ export default function Home() {
             </div>
           </Section>
 
-          <Section id="articles" number="02" title="Articles">
+          <Section id="articles" title="Articles">
             <div className="article-intro">
               <p>Notes from the work: what I’m learning, building, and trying to understand.</p>
               <a href={siteConfig.socials.devto} target="_blank" rel="noreferrer">Read on Dev.to ↗</a>
@@ -148,7 +148,7 @@ export default function Home() {
             )}
           </Section>
 
-          <Section id="experience" number="03" title="Experience / CV">
+          <Section id="experience" title="Experience / CV">
             <div className="experience-grid">
               <div>
                 {siteConfig.experience.map((item) => (
@@ -174,7 +174,7 @@ export default function Home() {
             </div>
           </Section>
 
-          <Section id="about" number="04" title="Beyond the Code">
+          <Section id="about" title="Beyond the Code">
             <div className="beyond-card">
               <div className="beyond-part">
                 <h3>📚 Currently Reading</h3>
