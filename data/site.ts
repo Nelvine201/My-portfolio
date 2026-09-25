@@ -25,14 +25,14 @@ export const siteConfig = {
   ],
   projects: [
     {
-      title: "ASCII Art Web",
-      subtitle: "A web application for generating ASCII art from text.",
-      problem: "Turn text into consistent ASCII-art output while supporting multiple banner styles through a web interface.",
-      solution: "Go handles the request flow and text transformation logic, while the frontend provides the input and result interface.",
+      title: "Chama Salama",
+      subtitle: "An offline-first savings group management system built for chamas in Kenya.",
+      problem: "Many chamas still rely on notebooks, WhatsApp threads, and memory to track contributions and payouts. This becomes difficult when members miss meetings, records are disputed, or the group has unreliable internet access. Withdrawals can also lack a clear multi-person approval process.",
+      solution: "Chama Salama provides a single source of truth for chama contributions and payouts, with offline contribution recording and synchronization, M-Pesa Daraja integration, and a multi-signature withdrawal flow requiring at least three members to approve a withdrawal.",
       outcome: "",
-      tech: ["Go", "HTML", "CSS"],
+      tech: ["Go", "SQLite", "Daraja API", "HTML", "CSS"],
       demo: "https://chama-salama.onrender.com/",
-      source: "[PROJECT_1_SOURCE_URL]",
+      source: "https://github.com/Nelvine201/chama-salama",
     },
     {
       title: "Push-Swap",
