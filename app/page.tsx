@@ -56,10 +56,6 @@ export default function Home() {
           <div className="header-inner">
             <div className="brand-wrap">
               <a className="brand" href="#home" aria-label="Go to homepage">{siteConfig.initials}</a>
-              <span className="availability">
-                <span className="availability-dot">●</span>
-                {siteConfig.availability}
-              </span>
             </div>
 
             <nav className="header-nav" aria-label="Primary navigation">
@@ -113,16 +109,8 @@ export default function Home() {
                 <img
                   src="/images/profile.jpg"
                   alt="Professional portrait of Nelvin Ochieng"
-                  onError={(event) => {
-                    event.currentTarget.style.display = "none";
-                    event.currentTarget.nextElementSibling?.classList.add("visible");
-                  }}
                 />
-                <div className="hero-photo-fallback" aria-hidden="true">
-                  NO
-                </div>
               </div>
-              <p className="hero-photo-note">Professional profile / replace images/profile.jpg anytime</p>
             </div>
           </div>
         </section>
