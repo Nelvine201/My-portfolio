@@ -111,7 +111,7 @@ export default function Home() {
             <div className="hero-visual">
               <div className="hero-photo-frame">
                 <img
-                  src="/profile.jpg"
+                  src="/images/profile.jpg"
                   alt="Professional portrait of Nelvin Ochieng"
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
@@ -122,7 +122,7 @@ export default function Home() {
                   NO
                 </div>
               </div>
-              <p className="hero-photo-note">Professional profile / replace profile.jpg anytime</p>
+              <p className="hero-photo-note">Professional profile / replace images/profile.jpg anytime</p>
             </div>
           </div>
         </section>
