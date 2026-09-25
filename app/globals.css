@@ -168,7 +168,57 @@ a {
 }
 
 .hero-copy {
-  grid-column: 1 / span 9;
+  grid-column: 1 / span 7;
+}
+
+.hero-visual {
+  grid-column: 9 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-photo-frame {
+  width: min(100%, 380px);
+  aspect-ratio: 4 / 5;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #2A2E35;
+  background: #1A1D21;
+}
+
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-photo-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #D97706;
+  font-family: var(--font-mono), monospace;
+  font-size: 3rem;
+  letter-spacing: -0.05em;
+}
+
+.hero-photo-fallback.visible {
+  display: grid;
+}
+
+.hero-photo-note {
+  width: min(100%, 380px);
+  margin: 10px 0 0;
+  color: #64748B;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .eyebrow,
@@ -189,18 +239,26 @@ a {
 }
 
 .hero h1 {
-  max-width: 920px;
+  max-width: 680px;
   margin: 0;
-  font-size: clamp(3.1rem, 8vw, 7rem);
-  line-height: 0.98;
-  letter-spacing: -0.065em;
+  font-size: clamp(2.7rem, 5.2vw, 4.8rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.hero-lead {
+  max-width: 590px;
+  margin: 18px 0 0;
+  color: #CBD5E1;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.5;
 }
 
 .hero-bio {
-  max-width: 650px;
-  margin: 30px 0 0;
+  max-width: 590px;
+  margin: 16px 0 0;
   color: #94A3B8;
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-size: 0.92rem;
 }
 
 .social-grid {
@@ -574,6 +632,16 @@ a {
     grid-column: 1 / -1;
   }
 
+  .hero-visual {
+    grid-column: 1 / -1;
+    align-items: flex-start;
+  }
+
+  .hero-photo-frame,
+  .hero-photo-note {
+    width: min(100%, 420px);
+  }
+
   .social-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -618,7 +686,7 @@ a {
   }
 
   .hero h1 {
-    font-size: clamp(2.7rem, 15vw, 4.3rem);
+    font-size: clamp(2.45rem, 12vw, 3.8rem);
   }
 
   .section-shell {
