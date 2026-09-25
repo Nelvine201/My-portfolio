@@ -95,8 +95,9 @@ export default function Home() {
         <section className="hero">
           <div className="page-width hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">SOFTWARE ENGINEERING / 2026</p>
-              <h1>{siteConfig.hero.headline}</h1>
+              <p className="eyebrow">NELVIN OCHIENG / SOFTWARE ENGINEERING</p>
+              <h1>{siteConfig.role}</h1>
+              <p className="hero-lead">{siteConfig.hero.headline}</p>
               <p className="hero-bio">{siteConfig.hero.bio}</p>
 
               <div className="social-grid" aria-label="Social links">
@@ -105,6 +106,23 @@ export default function Home() {
                 <a href={siteConfig.socials.devto} target="_blank" rel="noreferrer">Dev.to ↗</a>
                 <a href={`mailto:${siteConfig.email}`}>Email ↗</a>
               </div>
+            </div>
+
+            <div className="hero-visual">
+              <div className="hero-photo-frame">
+                <img
+                  src="/profile.jpg"
+                  alt="Professional portrait of Nelvin Ochieng"
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                    event.currentTarget.nextElementSibling?.classList.add("visible");
+                  }}
+                />
+                <div className="hero-photo-fallback" aria-hidden="true">
+                  NO
+                </div>
+              </div>
+              <p className="hero-photo-note">Professional profile / replace profile.jpg anytime</p>
             </div>
           </div>
         </section>
