@@ -34,26 +34,6 @@ export const siteConfig = {
       demo: "https://chama-salama.onrender.com/",
       source: "https://github.com/Nelvine201/chama-salama",
     },
-    {
-      title: "Push-Swap",
-      subtitle: "A sorting project built around stacks and constrained operations.",
-      problem: "Sort a sequence using two stacks and a limited set of operations while keeping the operation sequence efficient.",
-      solution: "Coordinate compression, stack operations, and chunk-based sorting are combined to manage the ordering problem.",
-      outcome: "",
-      tech: ["Go", "Algorithms", "Stacks"],
-      demo: "",
-      source: "[PROJECT_2_SOURCE_URL]",
-    },
-    {
-      title: "Go Reloaded",
-      subtitle: "A Go text-processing project.",
-      problem: "Read a text file, interpret embedded formatting commands, and produce a corrected output file.",
-      solution: "The program reads the source text, processes commands and transformations, then writes the formatted result to a new file.",
-      outcome: "",
-      tech: ["Go", "File Processing"],
-      demo: "",
-      source: "[PROJECT_3_SOURCE_URL]",
-    },
   ],
   experience: [
     {
