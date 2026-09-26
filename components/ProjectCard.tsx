@@ -14,8 +14,6 @@ type Project = {
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card">
-      <div className="project-index">01 / FEATURED WORK</div>
-
       <div className="project-case-study">
         <div className="project-heading-row">
           <h3>
