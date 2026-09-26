@@ -153,7 +153,7 @@ export default function Home() {
 
               <div className="hero-actions">
                 <a className="hero-button hero-button-primary" href="#projects">View my work</a>
-                <a className="hero-button hero-button-secondary" href="#about">Let’s connect</a>
+                <a className="hero-button hero-button-secondary" href="#contact">Let’s connect</a>
               </div>
             </div>
           </div>
