@@ -98,7 +98,7 @@ export default function Home() {
               ))}
             </nav>
 
-            <a className="cv-button desktop-cv" href="/cv.pdf">Download CV ↓</a>
+            <a className="cv-button desktop-cv" href={siteConfig.cv} target="_blank" rel="noreferrer">Download CV ↗</a>
 
             <button
               className="menu-button"
@@ -123,7 +123,7 @@ export default function Home() {
                 {item.label}
               </a>
             ))}
-            <a href="/cv.pdf" onClick={closeMenu}>Download CV ↓</a>
+            <a href={siteConfig.cv} target="_blank" rel="noreferrer" onClick={closeMenu}>Download CV ↗</a>
           </nav>
         </div>
       </header>
@@ -213,7 +213,7 @@ export default function Home() {
                     <p>{skills.join(" · ")}</p>
                   </div>
                 ))}
-                <a className="resume-button" href="/cv.pdf">View / Download Resume ↗</a>
+                <a className="resume-button" href={siteConfig.cv} target="_blank" rel="noreferrer">View / Download Resume ↗</a>
               </aside>
             </div>
           </Section>
