@@ -15,6 +15,14 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card">
       <div className="project-index">01 / FEATURED WORK</div>
+      <div className="project-preview" aria-label="Chama Salama landing page preview">
+        <iframe
+          src={project.demo}
+          title={`${project.title} landing page preview`}
+          loading="lazy"
+        />
+      </div>
+
       <div className="project-topline">
         <span className="mono-label">CASE STUDY</span>
         {project.outcome && <span className="metric">{project.outcome}</span>}
@@ -41,10 +49,10 @@ export function ProjectCard({ project }: { project: Project }) {
 
         <div className="project-links">
           {project.demo && project.demo.startsWith("http") && (
-            <a href={project.demo} target="_blank" rel="noreferrer">Live Demo ↗</a>
+            <a href={project.demo} target="_blank" rel="noreferrer">View Project ↗</a>
           )}
           {project.source && project.source.startsWith("http") && (
-            <a href={project.source} target="_blank" rel="noreferrer">Source ↗</a>
+            <a href={project.source} target="_blank" rel="noreferrer">GitHub ↗</a>
           )}
         </div>
       </div>
