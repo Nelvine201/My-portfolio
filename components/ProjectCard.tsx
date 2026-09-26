@@ -14,8 +14,9 @@ type Project = {
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card">
+      <div className="project-index">01 / FEATURED WORK</div>
       <div className="project-topline">
-        <span className="mono-label">PROJECT</span>
+        <span className="mono-label">CASE STUDY</span>
         {project.outcome && <span className="metric">{project.outcome}</span>}
       </div>
 
