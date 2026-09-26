@@ -350,8 +350,11 @@ a {
 
 .section-title {
   margin: 0;
-  font-size: clamp(1.9rem, 4vw, 3rem);
-  letter-spacing: -0.045em;
+  color: #D97706;
+  font-size: clamp(1.6rem, 2.2vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
 }
 
 .project-grid {
@@ -369,8 +372,8 @@ a {
 
 .featured-projects-section .section-title,
 #articles .section-title {
-  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
-  letter-spacing: -0.035em;
+  font-size: clamp(1.6rem, 2.2vw, 1.9rem);
+  letter-spacing: -0.025em;
 }
 
 .featured-project {
