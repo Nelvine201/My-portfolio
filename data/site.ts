@@ -4,6 +4,7 @@ export const siteConfig = {
   role: "Full-stack developer",
   availability: "Available for projects",
   email: "nelvinakinyi6@gmail.com",
+  cv: "https://docs.google.com/document/d/1EIDYUshdJx_0RtOxXE89SmlYAGZ0ry2fqvqxcIRtWXc/edit?usp=drive_link",
   devtoUsername: "nelvin_ochieng",
   socials: {
     github: "https://github.com/Nelvine201",
