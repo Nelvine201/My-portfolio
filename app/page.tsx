@@ -9,6 +9,7 @@ import { TimelineItem } from "../components/TimelineItem";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const [articles, setArticles] = useState<Article[]>([]);
   const [loadingArticles, setLoadingArticles] = useState(true);
   const [articleError, setArticleError] = useState(false);
@@ -61,6 +62,7 @@ export default function Home() {
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
         if (visible) {
+          setActiveSection(visible.target.id);
           window.history.replaceState(null, "", `#${visible.target.id}`);
         }
       },
@@ -86,7 +88,13 @@ export default function Home() {
 
             <nav className="header-nav" aria-label="Primary navigation">
               {siteConfig.navigation.map((item) => (
-                <a key={item.href} href={item.href}>{item.label}</a>
+                <a
+                  key={item.href}
+                  className={activeSection === item.href.slice(1) ? "active" : ""}
+                  href={item.href}
+                >
+                  {item.label}
+                </a>
               ))}
             </nav>
 
@@ -106,7 +114,14 @@ export default function Home() {
 
           <nav id="mobile-navigation" className={`mobile-nav ${menuOpen ? "open" : ""}`} aria-label="Mobile navigation">
             {siteConfig.navigation.map((item) => (
-              <a key={item.href} href={item.href} onClick={closeMenu}>{item.label}</a>
+              <a
+                key={item.href}
+                className={activeSection === item.href.slice(1) ? "active" : ""}
+                href={item.href}
+                onClick={closeMenu}
+              >
+                {item.label}
+              </a>
             ))}
             <a href="/cv.pdf" onClick={closeMenu}>Download CV ↓</a>
           </nav>
@@ -246,13 +261,19 @@ export default function Home() {
               <p>I’m always open to connecting with other developers, learning from people, and discussing interesting ideas.</p>
             </div>
             <div className="social-grid">
-              <a href={siteConfig.socials.x} target="_blank" rel="noreferrer">X ↗</a>
-              <a href={siteConfig.socials.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
-              <a href={siteConfig.socials.github} target="_blank" rel="noreferrer">GitHub ↗</a>
-              <a href={siteConfig.socials.devto} target="_blank" rel="noreferrer">dev.to ↗</a>
-              <a href={siteConfig.socials.instagram} target="_blank" rel="noreferrer">Instagram ↗</a>
-              <a href={siteConfig.socials.whatsapp} target="_blank" rel="noreferrer">WhatsApp ↗</a>
-              <a href={`mailto:${siteConfig.email}`}>Email ↗</a>
+              {[
+                ["X", siteConfig.socials.x],
+                ["LinkedIn", siteConfig.socials.linkedin],
+                ["GitHub", siteConfig.socials.github],
+                ["dev.to", siteConfig.socials.devto],
+                ["Instagram", siteConfig.socials.instagram],
+                ["WhatsApp", siteConfig.socials.whatsapp],
+              ]
+                .filter(([, href]) => href && !href.includes("["))
+                .map(([label, href]) => (
+                  <a key={label} href={href} target="_blank" rel="noreferrer">{label} ↗</a>
+                ))}
+              <a href={`mailto:${siteConfig.email}`}>Gmail ↗</a>
             </div>
           </Section>
         </div>
