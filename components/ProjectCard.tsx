@@ -15,44 +15,51 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card">
       <div className="project-index">01 / FEATURED WORK</div>
-      <div className="project-preview" aria-label="Chama Salama landing page preview">
-        <iframe
-          src={project.demo}
-          title={`${project.title} landing page preview`}
-          loading="lazy"
-        />
-      </div>
 
-      <div className="project-topline">
-        <span className="mono-label">CASE STUDY</span>
-        {project.outcome && <span className="metric">{project.outcome}</span>}
-      </div>
-
-      <h3>{project.title}</h3>
-      <p className="project-subtitle">{project.subtitle}</p>
-
-      <div className="project-detail-grid">
-        <div>
-          <p className="detail-label">The Problem</p>
-          <p>{project.problem}</p>
-        </div>
-        <div>
-          <p className="detail-label">The Solution</p>
-          <p>{project.solution}</p>
-        </div>
-      </div>
-
-      <div className="project-footer">
-        <div className="tech-list">
-          {project.tech.map((tech) => <TechPill key={tech}>{tech}</TechPill>)}
+      <div className="project-case-study">
+        <div className="project-heading-row">
+          <h3>
+            {project.demo ? (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noreferrer"
+                className="project-title-link"
+              >
+                {project.title} <span aria-hidden="true">↗</span>
+              </a>
+            ) : (
+              project.title
+            )}
+          </h3>
         </div>
 
-        <div className="project-links">
-          {project.demo && project.demo.startsWith("http") && (
-            <a href={project.demo} target="_blank" rel="noreferrer">View Project ↗</a>
-          )}
+        <p className="project-subtitle">{project.subtitle}</p>
+
+        <div className="project-detail-grid">
+          <div>
+            <p className="detail-label">Problem</p>
+            <p>{project.problem}</p>
+          </div>
+          <div>
+            <p className="detail-label">Solution</p>
+            <p>{project.solution}</p>
+          </div>
+        </div>
+
+        <div className="project-footer">
+          <div className="tech-list">
+            {project.tech.map((tech) => (
+              <TechPill key={tech}>{tech}</TechPill>
+            ))}
+          </div>
+
           {project.source && project.source.startsWith("http") && (
-            <a href={project.source} target="_blank" rel="noreferrer">GitHub ↗</a>
+            <div className="project-links">
+              <a href={project.source} target="_blank" rel="noreferrer">
+                GitHub ↗
+              </a>
+            </div>
           )}
         </div>
       </div>
