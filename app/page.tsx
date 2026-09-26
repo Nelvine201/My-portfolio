@@ -92,15 +92,16 @@ export default function Home() {
           <div className="page-width hero-grid">
             <div className="hero-copy">
               <p className="eyebrow">NELVIN OCHIENG</p>
-              <h1>{siteConfig.role}</h1>
-              <p className="hero-lead">{siteConfig.hero.headline}</p>
-              <p className="hero-bio">{siteConfig.hero.bio}</p>
+              <h1>Full-stack developer</h1>
+              <p className="hero-lead">Building things, solving problems, and learning along the way.</p>
+              <p className="hero-bio">
+                I’m a developer and Zone01 LakeHub apprentice focused on building practical web applications and backend systems. I work mainly with Go, JavaScript, and databases, and I enjoy turning ideas into things people can actually use.
+              </p>
+              <p className="hero-note">Currently learning. Constantly building. Always curious.</p>
 
-              <div className="social-grid" aria-label="Social links">
-                <a href={siteConfig.socials.github} target="_blank" rel="noreferrer">GitHub ↗</a>
-                <a href={siteConfig.socials.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
-                <a href={siteConfig.socials.devto} target="_blank" rel="noreferrer">Dev.to ↗</a>
-                <a href={`mailto:${siteConfig.email}`}>Email ↗</a>
+              <div className="hero-actions">
+                <a className="hero-button hero-button-primary" href="#projects">View my work</a>
+                <a className="hero-button hero-button-secondary" href="#about">Let’s connect</a>
               </div>
             </div>
 
