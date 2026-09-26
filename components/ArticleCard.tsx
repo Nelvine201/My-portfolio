@@ -25,12 +25,12 @@ export function ArticleCard({ article }: { article: Article }) {
       <p>{article.description}</p>
       <div className="article-bottom">
         <div className="tech-list">
-          {article.tag_list.slice(0, 3).map((tag) => <TechPill key={tag}>{tag}</TechPill>)}
+          {article.tag_list.slice(0, 2).map((tag) => <TechPill key={tag}>{tag}</TechPill>)}
         </div>
-        <span className="mono-label">{article.reading_time_minutes} min read</span>
+        <span className="article-reading">{article.reading_time_minutes} min read</span>
       </div>
       <a className="article-link" href={article.url} target="_blank" rel="noreferrer">
-        Read article ↗
+        Read ↗
       </a>
     </article>
   );
