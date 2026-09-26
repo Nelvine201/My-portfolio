@@ -162,10 +162,6 @@ export default function Home() {
         <div className="page-width">
           <Section id="projects" title="Featured Projects" className="featured-projects-section">
             <div className="featured-project">
-              <div className="featured-project-meta">
-                <span className="project-index">01 / FEATURED WORK</span>
-                <span className="mono-label">CASE STUDY</span>
-              </div>
               {siteConfig.projects.map((project) => (
                 <ProjectCard key={project.title} project={project} />
               ))}
