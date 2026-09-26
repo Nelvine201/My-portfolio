@@ -767,14 +767,6 @@ a {
   }
 }
 
-;
-  }
-
-  .timeline-item {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   html {
