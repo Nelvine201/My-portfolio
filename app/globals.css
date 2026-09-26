@@ -184,12 +184,14 @@ a {
 }
 
 .hero-photo-frame {
-  width: clamp(280px, 29vw, 430px);
-  aspect-ratio: 4 / 5;
+  width: clamp(280px, 29vw, 390px);
+  aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
   border: 1px solid #2A2E35;
+  border-radius: 50%;
   background: #1A1D21;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
 }
 
 .hero-photo-frame img {
@@ -655,7 +657,8 @@ a {
   }
 
   .hero-photo-frame {
-    width: min(100%, 300px);
+    width: min(100%, 290px);
+    aspect-ratio: 1 / 1;
   }
 
   .hero h1 {
@@ -727,7 +730,8 @@ a {
   }
 
   .hero-photo-frame {
-    width: min(72vw, 260px);
+    width: min(72vw, 250px);
+    aspect-ratio: 1 / 1;
   }
 
   .hero h1 {
