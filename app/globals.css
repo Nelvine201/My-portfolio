@@ -144,15 +144,17 @@ a {
 .cv-button {
   border: 1px solid #D97706;
   color: #D97706;
-  padding: 8px 12px;
+  padding: 9px 16px;
+  border-radius: 9999px;
   font-family: var(--font-mono), monospace;
   font-size: 0.72rem;
-  transition: background 160ms ease, color 160ms ease;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
 .cv-button:hover {
   background: #D97706;
   color: #121417;
+  transform: translateY(-1px);
 }
 
 .menu-button {
@@ -610,6 +612,15 @@ a {
 }
 
 .resume-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D97706;
+  color: #D97706;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
   display: inline-block;
   margin-top: 26px;
   padding: 11px 14px;
