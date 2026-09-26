@@ -49,13 +49,39 @@ export default function Home() {
 
   const closeMenu = () => setMenuOpen(false);
 
+  useEffect(() => {
+    const sectionIds = siteConfig.navigation
+      .map((item) => item.href.replace("#", ""))
+      .filter((id) => document.getElementById(id));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible) {
+          window.history.replaceState(null, "", `#${visible.target.id}`);
+        }
+      },
+      { rootMargin: "-35% 0px -55% 0px", threshold: [0, 0.25, 0.5] }
+    );
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="site-shell">
       <header className="site-header">
         <div className="page-width">
           <div className="header-inner">
             <div className="brand-wrap">
-              <a className="brand" href="#home" aria-label="Go to homepage">{siteConfig.initials}</a>
+              <a className="brand" href="#home" aria-label="Go to homepage">{siteConfig.name}</a>
             </div>
 
             <nav className="header-nav" aria-label="Primary navigation">
@@ -177,20 +203,56 @@ export default function Home() {
             </div>
           </Section>
 
-          <Section id="about" title="Beyond the Code">
-            <div className="beyond-card">
-              <div className="beyond-part">
-                <h3>📚 Currently Reading</h3>
+          <Section id="about" title="About">
+            <div className="about-layout">
+              <div className="about-copy">
+                <p className="section-kicker">A little about me</p>
+                <p>I’m a developer and Zone01 LakeHub apprentice focused on building practical web applications and backend systems.</p>
+                <p>I work mainly with Go, JavaScript, and databases, and I enjoy turning ideas into things people can actually use.</p>
+              </div>
+              <div className="about-side">
+                <span className="mono-label">Currently</span>
+                <strong>Learning by building.</strong>
+                <span className="mono-label">Focus</span>
+                <strong>Full-stack development with a backend focus.</strong>
+              </div>
+            </div>
+          </Section>
+
+          <Section id="hobbies" title="Hobbies">
+            <div className="hobbies-layout">
+              <div className="hobby-feature">
+                <span className="mono-label">01 / READING</span>
+                <h3>Currently Reading</h3>
                 <p>{siteConfig.hobbies.reading}</p>
               </div>
-              <div className="beyond-part">
-                <h3>⚡ Experiments & Interests</h3>
-                <p>{siteConfig.hobbies.experiments}</p>
+              <div className="hobby-list">
+                <div>
+                  <span className="mono-label">02 / EXPERIMENTS</span>
+                  <h3>Experiments & Interests</h3>
+                  <p>{siteConfig.hobbies.experiments}</p>
+                </div>
+                <div>
+                  <span className="mono-label">03 / WORKFLOW</span>
+                  <h3>Focus Workflow</h3>
+                  <p>{siteConfig.hobbies.workflow}</p>
+                </div>
               </div>
-              <div className="beyond-part">
-                <h3>🎧 Focus Workflow</h3>
-                <p>{siteConfig.hobbies.workflow}</p>
-              </div>
+            </div>
+          </Section>
+
+          <Section id="contact" title="Let's connect">
+            <div className="contact-intro">
+              <p>I’m always open to connecting with other developers, learning from people, and discussing interesting ideas.</p>
+            </div>
+            <div className="social-grid">
+              <a href={siteConfig.socials.x} target="_blank" rel="noreferrer">X ↗</a>
+              <a href={siteConfig.socials.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+              <a href={siteConfig.socials.github} target="_blank" rel="noreferrer">GitHub ↗</a>
+              <a href={siteConfig.socials.devto} target="_blank" rel="noreferrer">dev.to ↗</a>
+              <a href={siteConfig.socials.instagram} target="_blank" rel="noreferrer">Instagram ↗</a>
+              <a href={siteConfig.socials.whatsapp} target="_blank" rel="noreferrer">WhatsApp ↗</a>
+              <a href={`mailto:${siteConfig.email}`}>Email ↗</a>
             </div>
           </Section>
         </div>
@@ -198,11 +260,8 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="page-width footer-row">
-          <div>
-            <a className="footer-cta" href={`mailto:${siteConfig.email}`}>Let’s build something useful ↗</a>
-            <p className="footer-meta">{siteConfig.footer.tagline}</p>
-          </div>
-          <p className="footer-meta">© {new Date().getFullYear()} {siteConfig.name}</p>
+          <a className="footer-cta" href="#home">{siteConfig.name}</a>
+          <p className="footer-meta">© 2026 {siteConfig.name}</p>
         </div>
       </footer>
     </div>
