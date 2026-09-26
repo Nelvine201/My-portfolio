@@ -39,24 +39,24 @@ export const siteConfig = {
   ],
   experience: [
     {
-      period: "[DATE]",
-      title: "[ROLE]",
-      organization: "[ORGANIZATION]",
-      description: "[WHAT YOU WORKED ON / LEARNED]",
+      period: "2026-present",
+      title: "Apprentice",
+      organization: "Zone01-Lakehub",
+      description: "Software engineering training through collaborative projects, peer learning, and problem-solving.",
     },
   ],
   education: [
     {
-      period: "[DATE]",
-      title: "[DEGREE / PROGRAM]",
-      organization: "[INSTITUTION]",
-      description: "[OPTIONAL DETAIL]",
+      period: "2022-2026",
+      title: "BSc Information and Communication Technology Management",
+      organization: "Maseno University",
+      description: "Bachelor's degree focused on information technology, systems, and management.",
     },
   ],
   competencies: {
     Languages: ["Go", "JavaScript", "HTML", "CSS"],
-    "Backend & Data": ["[TECHNOLOGY]", "[DATABASE]"],
-    Tools: ["Git", "Docker", "[TOOL]"],
+    "Backend & Data": ["Go", "MySQL", "SQLite", "REST APIs"],
+    Tools: ["Git", "Docker", "GitHub"],
   },
   hobbies: {
     reading: "[CURRENT_BOOK / TOPIC]",
