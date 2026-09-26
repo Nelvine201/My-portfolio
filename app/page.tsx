@@ -89,28 +89,32 @@ export default function Home() {
 
       <main id="home">
         <section className="hero">
-          <div className="page-width hero-grid">
-            <div className="hero-copy">
-              <p className="eyebrow">NELVIN OCHIENG</p>
-              <h1>Full-stack developer</h1>
-              <p className="hero-lead">Building things, solving problems, and learning along the way.</p>
-              <p className="hero-bio">
-                I’m a developer and Zone01 LakeHub apprentice focused on building practical web applications and backend systems. I work mainly with Go, JavaScript, and databases, and I enjoy turning ideas into things people can actually use.
-              </p>
-              <p className="hero-note">Currently learning. Constantly building. Always curious.</p>
-
-              <div className="hero-actions">
-                <a className="hero-button hero-button-primary" href="#projects">View my work</a>
-                <a className="hero-button hero-button-secondary" href="#about">Let’s connect</a>
+          <div className="page-width">
+            <div className="hero-card">
+              <div className="hero-profile">
+                <div className="hero-photo-frame">
+                  <img
+                    src="/images/profile.jpg"
+                    alt="Professional portrait of Nelvin Ochieng"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div className="hero-visual">
-              <div className="hero-photo-frame">
-                <img
-                  src="/images/profile.jpg"
-                  alt="Professional portrait of Nelvin Ochieng"
-                />
+              <div className="hero-content">
+                <p className="eyebrow">NELVIN OCHIENG</p>
+                <h1>Hello, I&apos;m Nelvin Ochieng</h1>
+                <p className="hero-role">
+                  And I&apos;m a <span>Full-stack developer</span>
+                </p>
+                <p className="hero-bio">
+                  I&apos;m a developer and Zone01 LakeHub apprentice focused on building practical web applications and backend systems. I work mainly with Go, JavaScript, and databases, and I enjoy turning ideas into things people can actually use.
+                </p>
+                <p className="hero-note">Currently learning. Constantly building. Always curious.</p>
+
+                <div className="hero-actions">
+                  <a className="hero-button hero-button-primary" href="/cv.pdf">Download CV</a>
+                  <a className="hero-button hero-button-secondary" href="#projects">View my work</a>
+                </div>
               </div>
             </div>
           </div>
