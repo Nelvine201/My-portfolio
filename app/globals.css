@@ -367,10 +367,51 @@ a {
   background: #1A1D21;
 }
 
+.featured-projects-section .section-title {
+  font-family: var(--font-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: -0.045em;
+}
+
+.featured-project {
+  border-top: 1px solid #2A2E35;
+}
+
+.featured-project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #2A2E35;
+}
+
+.project-preview {
+  width: 100%;
+  aspect-ratio: 16 / 8.5;
+  overflow: hidden;
+  border-bottom: 1px solid #2A2E35;
+  background: #121417;
+}
+
+.project-preview iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  background: #121417;
+  transition: transform 350ms ease;
+}
+
+.project-card:hover .project-preview iframe {
+  transform: scale(1.012);
+}
+
 .project-card {
   grid-column: 1 / -1;
-  padding: clamp(28px, 4vw, 48px);
-  transition: border-color 180ms ease, transform 180ms ease;
+  border: 0;
+  background: transparent;
+  padding: clamp(32px, 5vw, 56px) 0 0;
+  transition: transform 180ms ease;
 }
 
 .project-index {
@@ -387,8 +428,7 @@ a {
 }
 
 .project-card:hover {
-  border-color: #D97706;
-  transform: translateY(-4px);
+  transform: none;
 }
 
 .project-card:hover .tech-pill {
@@ -470,7 +510,7 @@ a {
   white-space: nowrap;
 }
 
-.project-links a,
+ .project-links a,
 .article-link,
 .resume-button {
   color: #D97706;
