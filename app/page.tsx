@@ -222,14 +222,75 @@ export default function Home() {
             <div className="about-layout">
               <div className="about-copy">
                 <p className="section-kicker">A little about me</p>
-                <p>I’m a developer and Zone01 LakeHub apprentice focused on building practical web applications and backend systems.</p>
-                <p>I work mainly with Go, JavaScript, and databases, and I enjoy turning ideas into things people can actually use.</p>
+                <h3>Curious about how things work. Driven to build them better.</h3>
+                <p>
+                  I’m a Full-Stack & Backend Software Developer who enjoys turning ideas into practical software.
+                  My strongest interest is backend development, particularly with Go and Python, but I enjoy
+                  working across the stack and understanding how the different parts of an application fit together.
+                </p>
+                <p>
+                  I work with Django, Flask, SQL, HTML, and CSS, and I’m interested in building web platforms that
+                  are useful, reliable, and easy to maintain. I also enjoy working with the systems behind an
+                  application—designing databases, connecting services, and integrating technologies such as
+                  M-Pesa STK Push and OAuth.
+                </p>
+                <p>
+                  Alongside software development, I explore data analytics using SQL, Power BI, and Excel.
+                </p>
+
+                <h3>What I Do</h3>
+                <ul>
+                  <li>Build backend applications and utilities with Go and Python.</li>
+                  <li>Develop web platforms using Django, Flask, HTML, and CSS.</li>
+                  <li>Design databases and work with SQL.</li>
+                  <li>Integrate applications with services such as M-Pesa and OAuth.</li>
+                  <li>Explore and analyze data using SQL, Power BI, and Excel.</li>
+                  <li>Work with Git, GitHub, Gitea, and Linux/Unix environments.</li>
+                </ul>
+
+                <h3>How I Work</h3>
+                <p>
+                  I like to understand the problem first, then figure out how the pieces should fit together before
+                  writing the code.
+                </p>
+                <p>
+                  I enjoy collaborative environments where I can exchange ideas, learn from other developers, and
+                  contribute to solving technical problems. I care about writing clean, understandable code and
+                  documenting things clearly so that the work remains useful beyond the moment it is built.
+                </p>
+                <p>
+                  Most importantly, I’m a continuous learner. I don’t approach development as someone who already
+                  knows everything. I approach it with curiosity, a willingness to ask questions, and a desire to
+                  keep getting better with every system I build.
+                </p>
               </div>
+
               <div className="about-side">
-                <span className="mono-label">Currently</span>
-                <strong>Learning by building.</strong>
-                <span className="mono-label">Focus</span>
-                <strong>Full-stack development with a backend focus.</strong>
+                <span className="mono-label">Technical Toolkit</span>
+                <div className="competency-group">
+                  <h4>Languages</h4>
+                  <p>Go · Python · SQL · HTML · CSS</p>
+                </div>
+                <div className="competency-group">
+                  <h4>Frameworks</h4>
+                  <p>Django · Flask</p>
+                </div>
+                <div className="competency-group">
+                  <h4>Integrations</h4>
+                  <p>M-Pesa STK Push · OAuth</p>
+                </div>
+                <div className="competency-group">
+                  <h4>Databases</h4>
+                  <p>SQL · Database Design</p>
+                </div>
+                <div className="competency-group">
+                  <h4>Data Analytics</h4>
+                  <p>SQL · Power BI · Excel</p>
+                </div>
+                <div className="competency-group">
+                  <h4>Developer Tools</h4>
+                  <p>Git · GitHub · Gitea · Linux / Unix Shell</p>
+                </div>
               </div>
             </div>
           </Section>
