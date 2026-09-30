@@ -160,6 +160,9 @@ export default function Home() {
         </section>
 
 
+
+
+        <div className="page-width">
           <Section id="about" title="About">
             <div className="about-layout">
               <div className="about-copy">
@@ -205,7 +208,6 @@ export default function Home() {
             </div>
           </Section>
 
-        <div className="page-width">
           <Section id="projects" title="Featured Projects" className="featured-projects-section">
             <div className="featured-project">
               {siteConfig.projects.map((project) => (
