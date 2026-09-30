@@ -182,7 +182,6 @@ a {
   display: grid;
   align-items: center;
   padding: clamp(72px, 9vh, 110px) 0;
-  border-bottom: 1px solid #E5E7EB;
 }
 
 .hero-grid {
@@ -335,7 +334,6 @@ a {
 
 .section-shell {
   padding: 110px 0;
-  border-bottom: 1px solid #E5E7EB;
 }
 
 .section-heading {
