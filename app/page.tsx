@@ -302,14 +302,14 @@ export default function Home() {
                 .map(([label, href, icon]) => (
                   <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} title={label}>
                     <span className="social-icon" aria-hidden="true">{icon}</span>
-                    <span className="social-arrow" aria-hidden="true">↗</span>
+                    
                   </a>
                 ))}
               <a href={`mailto:${siteConfig.email}`} aria-label="Email" title="Email">
                 <span className="social-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17A2.5 2.5 0 0 1 23 8v8a2.5 2.5 0 0 1-2.5 2.5h-17A2.5 2.5 0 0 1 1 16V8a2.5 2.5 0 0 1 2.5-2.5Zm0 1.8a.7.7 0 0 0-.42.14L12 13.66l8.92-6.22a.7.7 0 0 0-.42-.14h-17ZM21.2 9.08l-8.69 6.05a.9.9 0 0 1-1.02 0L2.8 9.08V16a.7.7 0 0 0 .7.7h17a.7.7 0 0 0 .7-.7V9.08Z" /></svg>
                 </span>
-                <span className="social-arrow" aria-hidden="true">↗</span>
+                
               </a>
             </div>
           </Section>
