@@ -776,6 +776,27 @@ a {
   color: #D97706;
 }
 
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  font-family: var(--font-mono), monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.social-gmail {
+  font-size: 1.1rem;
+}
+
+.social-arrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+}
+
 .site-footer {
   padding: 50px 0;
 }
