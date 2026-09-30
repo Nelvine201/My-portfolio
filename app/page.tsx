@@ -159,6 +159,52 @@ export default function Home() {
           </div>
         </section>
 
+
+          <Section id="about" title="About">
+            <div className="about-layout">
+              <div className="about-copy">
+                <p className="section-kicker">A little about me</p>
+                <h3>Curious about how things work. Driven to build them better.</h3>
+                <p>
+                  I’m Nelvin Ochieng, a Full-Stack & Backend Software Developer focused on Go, Python, web platforms,
+                  and data. I enjoy turning ideas into practical software and understanding how the pieces of a system fit together.
+                </p>
+                <p>
+                  I work with Go, Python, Django, Flask, SQL, HTML, and CSS, with an interest in backend development,
+                  database design, and integrations such as M-Pesa STK Push and OAuth. I also explore data analytics using Power BI and Excel.
+                </p>
+                <p>
+                  I enjoy collaborative environments, clean code, clear documentation, and learning through building.
+                  I’m still growing as a developer, and each project is another opportunity to learn something new and build better.
+                </p>
+              </div>
+
+              <div className="about-side">
+                <span className="mono-label">Technical Toolkit</span>
+                <div className="competency-group">
+                  <h4>Languages</h4>
+                  <p>Go · Python · SQL · HTML · CSS</p>
+                </div>
+                <div className="competency-group">
+                  <h4>Frameworks</h4>
+                  <p>Django · Flask</p>
+                </div>
+                <div className="competency-group">
+                  <h4>Integrations</h4>
+                  <p>M-Pesa STK Push · OAuth</p>
+                </div>
+                <div className="competency-group">
+                  <h4>Data</h4>
+                  <p>SQL · Power BI · Excel</p>
+                </div>
+                <div className="competency-group">
+                  <h4>Tools</h4>
+                  <p>Git · GitHub · Gitea · Linux / Unix Shell</p>
+                </div>
+              </div>
+            </div>
+          </Section>
+
         <div className="page-width">
           <Section id="projects" title="Featured Projects" className="featured-projects-section">
             <div className="featured-project">
@@ -218,50 +264,7 @@ export default function Home() {
             </div>
           </Section>
 
-          <Section id="about" title="About">
-            <div className="about-layout">
-              <div className="about-copy">
-                <p className="section-kicker">A little about me</p>
-                <h3>Curious about how things work. Driven to build them better.</h3>
-                <p>
-                  I’m Nelvin Ochieng, a Full-Stack & Backend Software Developer focused on Go, Python, web platforms,
-                  and data. I enjoy turning ideas into practical software and understanding how the pieces of a system fit together.
-                </p>
-                <p>
-                  I work with Go, Python, Django, Flask, SQL, HTML, and CSS, with an interest in backend development,
-                  database design, and integrations such as M-Pesa STK Push and OAuth. I also explore data analytics using Power BI and Excel.
-                </p>
-                <p>
-                  I enjoy collaborative environments, clean code, clear documentation, and learning through building.
-                  I’m still growing as a developer, and each project is another opportunity to learn something new and build better.
-                </p>
-              </div>
 
-              <div className="about-side">
-                <span className="mono-label">Technical Toolkit</span>
-                <div className="competency-group">
-                  <h4>Languages</h4>
-                  <p>Go · Python · SQL · HTML · CSS</p>
-                </div>
-                <div className="competency-group">
-                  <h4>Frameworks</h4>
-                  <p>Django · Flask</p>
-                </div>
-                <div className="competency-group">
-                  <h4>Integrations</h4>
-                  <p>M-Pesa STK Push · OAuth</p>
-                </div>
-                <div className="competency-group">
-                  <h4>Data</h4>
-                  <p>SQL · Power BI · Excel</p>
-                </div>
-                <div className="competency-group">
-                  <h4>Tools</h4>
-                  <p>Git · GitHub · Gitea · Linux / Unix Shell</p>
-                </div>
-              </div>
-            </div>
-          </Section>
 
           <Section id="hobbies" title="Hobbies">
             <div className="hobbies-layout">
@@ -289,7 +292,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="site-footer">
+      <footer id="contact" className="site-footer">
         <div className="page-width footer-row">
           <div className="footer-socials">
             {[
