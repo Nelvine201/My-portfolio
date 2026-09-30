@@ -904,8 +904,11 @@ a {
     grid-row: auto;
   }
 
-  .about-layout,
-  .hobbies-layout {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hobbies-grid {
     grid-template-columns: 1fr;
   }
 
