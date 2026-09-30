@@ -167,7 +167,6 @@ export default function Home() {
             <div className="about-layout">
               <div className="about-copy">
                 <p className="section-kicker">A little about me</p>
-                <h3>Curious about how things work. Driven to build them better.</h3>
                 <p>
                   I’m Nelvin Ochieng, a Full-Stack & Backend Software Developer focused on Go, Python, web platforms,
                   and data. I enjoy turning ideas into practical software and understanding how the pieces of a system fit together.
@@ -222,7 +221,6 @@ export default function Home() {
 
           <Section id="articles" title="Articles">
             <div className="article-intro">
-              <p>Notes from the work: what I’m learning, building, and trying to understand.</p>
               <a href={siteConfig.socials.devto} target="_blank" rel="noreferrer">Read on Dev.to ↗</a>
             </div>
 
@@ -321,7 +319,6 @@ export default function Home() {
             </a>
           </div>
           <div className="footer-details">
-            <a className="footer-cta" href="#home">{siteConfig.name}</a>
             <p className="footer-meta">© 2026 {siteConfig.name}</p>
           </div>
         </div>
