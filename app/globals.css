@@ -758,12 +758,22 @@ a {
 }
 
 .footer-socials a {
-  color: #CBD5E1;
-  transition: color 180ms ease, transform 180ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: #F8FAFC;
+  background: #24282E;
+  border: 1px solid #3A4048;
+  border-radius: 50%;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
 .footer-socials a:hover {
-  color: #D97706;
+  color: #FFFFFF;
+  background: #D97706;
+  border-color: #D97706;
   transform: translateY(-2px);
 }
 
@@ -777,8 +787,8 @@ a {
 }
 
 .footer-socials .social-icon svg {
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
 }
 
 .footer-socials a:hover .social-icon {
