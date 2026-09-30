@@ -55,26 +55,35 @@ export default function Home() {
       .map((item) => item.href.replace("#", ""))
       .filter((id) => document.getElementById(id));
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    const updateActiveSection = () => {
+      const headerOffset = 96;
+      const currentPosition = window.scrollY + headerOffset;
 
-        if (visible) {
-          setActiveSection(visible.target.id);
-          window.history.replaceState(null, "", `#${visible.target.id}`);
+      if (window.scrollY < 80) {
+        setActiveSection("home");
+        return;
+      }
+
+      let currentId = "home";
+
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section && section.offsetTop <= currentPosition) {
+          currentId = id;
         }
-      },
-      { rootMargin: "-35% 0px -55% 0px", threshold: [0, 0.25, 0.5] }
-    );
+      });
 
-    sectionIds.forEach((id) => {
-      const section = document.getElementById(id);
-      if (section) observer.observe(section);
-    });
+      setActiveSection(currentId);
+    };
 
-    return () => observer.disconnect();
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   return (
@@ -254,10 +263,6 @@ export default function Home() {
                   <TimelineItem key={item.title} {...item} />
                 ))}
               </div>
-
-              <aside>
-                <a className="resume-button" href={siteConfig.cv} target="_blank" rel="noreferrer">View / Download Resume ↗</a>
-              </aside>
             </div>
           </Section>
 
