@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 import { siteConfig } from "../data/site";
 import { Article, ArticleCard } from "../components/ArticleCard";
@@ -168,9 +169,6 @@ export default function Home() {
           </div>
         </section>
 
-
-
-
         <div className="page-width">
           <Section id="about" title="About">
             <div className="about-layout">
@@ -266,8 +264,6 @@ export default function Home() {
             </div>
           </Section>
 
-
-
           <Section id="hobbies" title="Hobbies">
             <div className="hobbies-grid">
               <div className="hobby-card">
@@ -295,22 +291,20 @@ export default function Home() {
               </div>
             </div>
           </Section>
-
-
         </div>
       </main>
 
       <footer id="contact" className="site-footer">
         <div className="page-width footer-row">
           <div className="footer-socials">
-            {[
+            {([
               ["X", siteConfig.socials.x, <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.964 6.817H1.683l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" /></svg>],
               ["LinkedIn", siteConfig.socials.linkedin, <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.28 2.37 4.28 5.46v6.29ZM5.32 7.41a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.54 20.45H7.1V8.98H3.54v11.47Z" /></svg>],
               ["GitHub", siteConfig.socials.github, <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.05c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.94 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.64-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .3Z" /></svg>],
               ["dev.to", siteConfig.socials.devto, <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.25 4.5h9.5A2.75 2.75 0 0 1 19.5 7.25v9.5a2.75 2.75 0 0 1-2.75 2.75h-9.5A2.75 2.75 0 0 1 4.5 16.75v-9.5A2.75 2.75 0 0 1 7.25 4.5Zm.75 3v9h1.75V13h1.1c1.6 0 2.6-1.08 2.6-2.75S12.45 7.5 10.85 7.5H8Zm1.75 1.5h1.02c.64 0 .93.42.93 1.25s-.29 1.25-.93 1.25H9.75V9Zm4.5-1.5v9h4v-1.5h-2.25v-2.25h2v-1.5h-2V9h2.25V7.5h-4Z" /></svg>],
               ["Instagram", siteConfig.socials.instagram, <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2.5h9A5 5 0 0 1 21.5 7.5v9a5 5 0 0 1-5 5h-9a5 5 0 0 1-5-5v-9a5 5 0 0 1 5-5Zm0 1.8A3.2 3.2 0 0 0 4.3 7.5v9a3.2 3.2 0 0 0 3.2 3.2h9a3.2 3.2 0 0 0 3.2-3.2v-9a3.2 3.2 0 0 0-3.2-3.2h-9Zm9.65 1.35a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7.25A4.75 4.75 0 1 1 12 16.75 4.75 4.75 0 0 1 12 7.25Zm0 1.8a2.95 2.95 0 1 0 0 5.9 2.95 2.95 0 0 0 0-5.9Z" /></svg>],
               ["WhatsApp", siteConfig.socials.whatsapp, <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 0 0-8.22 14.26L2.5 21.5l4.9-1.25A9.5 9.5 0 1 0 12 2.5Zm0 1.8a7.7 7.7 0 0 1 6.55 11.74l-.3.47.72 2.7-2.77-.71-.45.27A7.7 7.7 0 1 1 12 4.3Zm-3.2 3.3c-.22 0-.57.08-.87.42-.3.34-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.27 3.64 5.57 4.95 2.75 1.09 3.31.87 3.91.82.6-.05 1.94-.79 2.21-1.55.27-.76.27-1.41.19-1.55-.08-.14-.3-.22-.63-.39-.33-.16-1.94-.96-2.24-1.07-.3-.11-.52-.16-.74.16-.22.33-.85 1.07-1.04 1.29-.19.22-.38.25-.71.08-.33-.16-1.39-.51-2.65-1.63-.98-.87-1.64-1.94-1.83-2.27-.19-.33-.02-.5.14-.67.14-.14.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.16-.74-1.79-1.01-2.45-.27-.65-.54-.55-.74-.56Z" /></svg>],
-            ]
+            ] as [string, string, ReactNode][])
               .filter(([, href]) => href && !href.includes("["))
               .map(([label, href, icon]) => (
                 <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} title={label}>
@@ -327,6 +321,7 @@ export default function Home() {
             <p className="footer-meta">© 2026 {siteConfig.name}</p>
           </div>
         </div>
-      </footer>    </div>
+      </footer>
+    </div>
   );
 }
