@@ -269,23 +269,29 @@ export default function Home() {
 
 
           <Section id="hobbies" title="Hobbies">
-            <div className="hobbies-layout">
-              <div className="hobby-feature">
-                <span className="mono-label">01 / READING</span>
-                <h3>Currently Reading</h3>
-                <p>{siteConfig.hobbies.reading}</p>
+            <div className="hobbies-grid">
+              <div className="hobby-card">
+                <h3>Building & Experimenting</h3>
+                <p>
+                  I enjoy learning by making things. I like taking an idea, turning it into something tangible,
+                  testing it, breaking it, and figuring out how to make it work better.
+                </p>
               </div>
-              <div className="hobby-list">
-                <div>
-                  <span className="mono-label">02 / EXPERIMENTS</span>
-                  <h3>Experiments & Interests</h3>
-                  <p>{siteConfig.hobbies.experiments}</p>
-                </div>
-                <div>
-                  <span className="mono-label">03 / WORKFLOW</span>
-                  <h3>Focus Workflow</h3>
-                  <p>{siteConfig.hobbies.workflow}</p>
-                </div>
+
+              <div className="hobby-card">
+                <h3>Exploring Technology & AI</h3>
+                <p>
+                  I’m curious about how new technologies work and what they can actually be used for.
+                  I enjoy exploring AI tools, developer workflows, and practical ways technology can solve everyday problems.
+                </p>
+              </div>
+
+              <div className="hobby-card">
+                <h3>Writing & Sharing What I Learn</h3>
+                <p>
+                  Writing helps me process what I learn. I enjoy turning lessons from projects, challenges,
+                  and experiments into simple ideas that I can share with others.
+                </p>
               </div>
             </div>
           </Section>
