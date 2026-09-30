@@ -794,15 +794,17 @@ a {
 
 .footer-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 28px;
+  justify-content: center;
+  gap: 22px;
   color: #94A3B8;
 }
 
 .footer-details {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 24px;
 }
 
