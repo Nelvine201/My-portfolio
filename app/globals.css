@@ -782,20 +782,16 @@ a {
   justify-content: center;
   min-width: 34px;
   height: 34px;
-  font-family: var(--font-mono), monospace;
-  font-size: 1rem;
-  font-weight: 700;
   line-height: 1;
 }
 
-.social-gmail {
-  font-size: 1.1rem;
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: currentColor;
 }
 
-.social-arrow {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.8rem;
-}
 
 .site-footer {
   padding: 50px 0;
