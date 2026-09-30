@@ -258,13 +258,6 @@ export default function Home() {
               </div>
 
               <aside>
-                <h3 className="competency-heading">Core Competencies</h3>
-                {Object.entries(siteConfig.competencies).map(([category, skills]) => (
-                  <div className="competency-group" key={category}>
-                    <h4>{category}</h4>
-                    <p>{skills.join(" · ")}</p>
-                  </div>
-                ))}
                 <a className="resume-button" href={siteConfig.cv} target="_blank" rel="noreferrer">View / Download Resume ↗</a>
               </aside>
             </div>
