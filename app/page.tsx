@@ -291,18 +291,24 @@ export default function Home() {
             </div>
             <div className="social-grid">
               {[
-                ["X", siteConfig.socials.x],
-                ["LinkedIn", siteConfig.socials.linkedin],
-                ["GitHub", siteConfig.socials.github],
-                ["dev.to", siteConfig.socials.devto],
-                ["Instagram", siteConfig.socials.instagram],
-                ["WhatsApp", siteConfig.socials.whatsapp],
+                ["X", siteConfig.socials.x, "𝕏"],
+                ["LinkedIn", siteConfig.socials.linkedin, "in"],
+                ["GitHub", siteConfig.socials.github, "◖"],
+                ["dev.to", siteConfig.socials.devto, "dev"],
+                ["Instagram", siteConfig.socials.instagram, "◎"],
+                ["WhatsApp", siteConfig.socials.whatsapp, "◔"],
               ]
                 .filter(([, href]) => href && !href.includes("["))
-                .map(([label, href]) => (
-                  <a key={label} href={href} target="_blank" rel="noreferrer">{label} ↗</a>
+                .map(([label, href, icon]) => (
+                  <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} title={label}>
+                    <span className="social-icon" aria-hidden="true">{icon}</span>
+                    <span className="social-arrow" aria-hidden="true">↗</span>
+                  </a>
                 ))}
-              <a href={`mailto:${siteConfig.email}`}>Gmail ↗</a>
+              <a href={`mailto:${siteConfig.email}`} aria-label="Gmail" title="Gmail">
+                <span className="social-icon social-gmail" aria-hidden="true">@</span>
+                <span className="social-arrow" aria-hidden="true">↗</span>
+              </a>
             </div>
           </Section>
         </div>
