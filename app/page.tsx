@@ -26,8 +26,8 @@ export default function Home() {
 
       try {
         const response = await fetch(
-          `https://dev.to/api/articles?username=${encodeURIComponent(siteConfig.devtoUsername)}&per_page=4`,
-          { signal: controller.signal }
+          `https://dev.to/api/articles?username=${encodeURIComponent(siteConfig.devtoUsername)}&per_page=10`,
+          { signal: controller.signal, cache: "no-store" }
         );
 
         if (!response.ok) throw new Error("Unable to load articles.");
@@ -234,7 +234,7 @@ export default function Home() {
                   <p className="mono-label" role="status">Live feed unavailable — showing saved articles.</p>
                 )}
                 <div className="article-grid">
-                  {articles.slice(0, 4).map((article) => (
+                  {articles.slice(0, 5).map((article) => (
                     <ArticleCard key={article.url} article={article} />
                   ))}
                 </div>
