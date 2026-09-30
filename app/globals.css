@@ -763,9 +763,9 @@ a {
   justify-content: center;
   width: 48px;
   height: 48px;
-  color: #F8FAFC;
-  background: #24282E;
-  border: 1px solid #3A4048;
+  color: #FFFFFF;
+  background: transparent;
+  border: 1px solid #FFFFFF;
   border-radius: 50%;
   transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
