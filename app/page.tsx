@@ -186,7 +186,11 @@ export default function Home() {
                 <span className="mono-label">Technical Toolkit</span>
                 <div className="competency-group">
                   <h4>Languages</h4>
-                  <p>Go · Python · SQL · HTML · CSS</p>
+                  <p>Go · JavaScript · Python · HTML · CSS · SQL</p>
+                </div>
+                <div className="competency-group">
+                  <h4>Backend & Data</h4>
+                  <p>Go · MySQL · SQLite · REST APIs</p>
                 </div>
                 <div className="competency-group">
                   <h4>Frameworks</h4>
@@ -197,12 +201,12 @@ export default function Home() {
                   <p>M-Pesa STK Push · OAuth</p>
                 </div>
                 <div className="competency-group">
-                  <h4>Data</h4>
+                  <h4>Data & Analytics</h4>
                   <p>SQL · Power BI · Excel</p>
                 </div>
                 <div className="competency-group">
                   <h4>Tools</h4>
-                  <p>Git · GitHub · Gitea · Linux / Unix Shell</p>
+                  <p>Git · Docker · GitHub · Gitea · Linux / Unix Shell</p>
                 </div>
               </div>
             </div>
