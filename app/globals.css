@@ -253,7 +253,8 @@ a {
 
 .eyebrow {
   color: #D97706;
-  font-size: 0.88rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
   margin: 0 0 18px;
 }
 
