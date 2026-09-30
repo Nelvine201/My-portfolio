@@ -37,6 +37,16 @@ export const siteConfig = {
       demo: "https://chama-salama.onrender.com/",
       source: "https://github.com/Nelvine201/chama-salama",
     },
+    {
+      title: "LakeProof",
+      subtitle: "A collaborative Lake Victoria seafood traceability workspace for recording catch provenance and custody handovers.",
+      problem: "Small-scale fisheries can have fragmented records across paper documents, messaging threads, and disconnected systems, making it harder to follow a catch from landing site to buyer.",
+      solution: "LakeProof presents a continuous proof journey from Catch → Landing → Transport → Processing → Market. I contributed to the backend persistence work as part of the collaborative project, working within its TypeScript monorepo and database architecture.",
+      outcome: "",
+      tech: ["TypeScript", "Express", "PostgreSQL", "Drizzle ORM", "OpenAPI", "Zod"],
+      demo: "https://lake-proof.vercel.app",
+      source: "https://github.com/walterhrad-pixel/LakeProof",
+    },
   ],
   experience: [
     {
