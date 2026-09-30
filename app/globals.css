@@ -864,6 +864,10 @@ a {
   transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
+.footer-socials a svg {
+  fill: #FFFFFF;
+}
+
 .footer-socials a:hover {
   color: #FFFFFF;
   background: #D97706;
