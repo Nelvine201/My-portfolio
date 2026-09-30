@@ -54,8 +54,10 @@ a {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   border-bottom: 1px solid rgba(42, 46, 53, 0.85);
   background: rgba(18, 20, 23, 0.88);
