@@ -140,36 +140,18 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hero-kinetic" aria-hidden="true">
-              {[
-                ["GO", "kinetic-go"],
-                ["JAVASCRIPT", "kinetic-javascript"],
-                ["BACKEND", "kinetic-backend"],
-                ["BUILD", "kinetic-build"],
-                ["CREATE", "kinetic-create"],
-                ["LEARN", "kinetic-learn"],
-                ["AI", "kinetic-ai"],
-                ["MYSQL", "kinetic-mysql"],
-                ["EXPLORE", "kinetic-explore"],
-              ].map(([word, className]) => (
-                <span key={word} className={`kinetic-word ${className}`}>
-                  {word}
-                </span>
-              ))}
-            </div>
-
             <div className="hero-copy">
-              <p className="eyebrow">NELVIN OCHIENG</p>
-              <h1>Full-stack developer</h1>
-              <p className="hero-lead">
+              <p className="eyebrow hero-kinetic-item">NELVIN OCHIENG</p>
+              <h1 className="hero-kinetic-item">Full-stack developer</h1>
+              <p className="hero-lead hero-kinetic-item">
                 Building things, solving problems, and learning along the way.
               </p>
-              <p className="hero-bio">
+              <p className="hero-bio hero-kinetic-item">
                 I’m a developer and Zone01 LakeHub apprentice focused on building practical web applications and backend systems. I work mainly with Go, JavaScript, and databases, and I enjoy turning ideas into things people can actually use.
               </p>
               <p className="hero-note">Currently learning. Constantly building. Always curious.</p>
 
-              <div className="hero-actions">
+              <div className="hero-actions hero-kinetic-item">
                 <a className="hero-button hero-button-primary" href="#projects">View my work</a>
                 <a className="hero-button hero-button-secondary" href="#contact">Let’s connect</a>
               </div>
