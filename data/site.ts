@@ -19,6 +19,7 @@ export const siteConfig = {
     bio: "I’m building my software engineering skills through hands-on projects, with a growing focus on backend development, systems, and web architecture. I learn by breaking problems down, building the solution, and understanding why it works.",
   },
   navigation: [
+    { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
     { label: "Articles", href: "#articles" },
